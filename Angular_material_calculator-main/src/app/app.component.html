@@ -1,0 +1,51 @@
+<div class="calculator">
+  <h1>ANGULAR JS Calculator</h1>
+
+  <div>
+    <br>
+    <input class="result" type="text" readonly value="{{ result }}"><br><br><br><br>
+  </div>
+
+  <div>
+    <button class="responsive long" *ngFor="let longButton of longButtons" (click)="addToExpression(longButton)">
+      {{ longButton }}
+    </button>
+    <button class="responsive " *ngFor="let button of buttons" (click)="addToExpression(button)">
+      {{ button }}
+    </button>
+    <button class="responsive long" *ngFor="let longButton1 of longButtons1" (click)="addToExpression(longButton1)">
+      {{ longButton1 }}
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="footer">
+  <div class="row">
+    <div class="column1">
+      <mat-slide-toggle>
+        <h3>CLICK TO ACKNOWLEDGE WITH T&C</h3>
+      </mat-slide-toggle>
+    </div>
+    <div class="column1">
+      <h3>RATE US</h3>
+      <mat-slider
+        thumbLabel
+        tickInterval="10"
+        step="1"
+        min="0"
+        max="10"
+        aria-label="units"></mat-slider>
+    </div>
+    <div class="column1">
+      <h3>Was it helpful?</h3>
+      <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Yes</mat-radio-button>
+      &nbsp;
+      <mat-radio-button value="2">No</mat-radio-button>
+    </mat-radio-group>
+    </div>
+  </div>
+</div>
